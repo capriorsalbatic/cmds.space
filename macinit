@@ -1,0 +1,23 @@
+# ----------------------------------------------------------------------
+# MACOS/LINUX INSTALLATION COMMANDS (Use Bash/Zsh Terminal)
+# ----------------------------------------------------------------------
+
+# 1. INSTALL HOMEBREW (The macOS Package Manager)
+# This is the official installation script.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. INSTALL NODE.JS
+# Uses Homebrew to install the latest Node.js.
+brew install node
+
+# 3. INSTALL/UPGRADE PIP (Python Package Installer)
+# Ensures Pip is up-to-date for Python 3 (which is included or installed via Brew).
+python3 -m pip install --upgrade pip
+
+# 4. INSTALL GEMINI CLI (Command Line Interface)
+# Uses the Homebrew package for the CLI.
+brew install gemini-cli
+
+# ----------------------------------------------------------------------
+# More commands at: curl cmds.space/map
+# ----------------------------------------------------------------------

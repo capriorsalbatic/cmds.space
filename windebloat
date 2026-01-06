@@ -1,0 +1,60 @@
+# ----------------------------------------------------------------------
+# WINDOWS DEBLOAT COMMANDS - DISABLE UNNECESSARY SERVICES
+# (Run PowerShell as Administrator)
+# ----------------------------------------------------------------------
+
+# TELEMETRY & DATA COLLECTION
+Stop-Service -Name "DiagTrack" -Force; Set-Service -Name "DiagTrack" -StartupType Disabled
+Stop-Service -Name "dmwappushservice" -Force; Set-Service -Name "dmwappushservice" -StartupType Disabled
+
+# REMOTE SERVICES (Disable if not needed)
+Stop-Service -Name "RemoteRegistry" -Force; Set-Service -Name "RemoteRegistry" -StartupType Disabled
+Stop-Service -Name "RemoteAccess" -Force; Set-Service -Name "RemoteAccess" -StartupType Disabled
+
+# XBOX SERVICES (Disable if not gaming)
+Stop-Service -Name "XblAuthManager" -Force; Set-Service -Name "XblAuthManager" -StartupType Disabled
+Stop-Service -Name "XblGameSave" -Force; Set-Service -Name "XblGameSave" -StartupType Disabled
+Stop-Service -Name "XboxGipSvc" -Force; Set-Service -Name "XboxGipSvc" -StartupType Disabled
+Stop-Service -Name "XboxNetApiSvc" -Force; Set-Service -Name "XboxNetApiSvc" -StartupType Disabled
+
+# GEOLOCATION SERVICE
+Stop-Service -Name "lfsvc" -Force; Set-Service -Name "lfsvc" -StartupType Disabled
+
+# FAX SERVICE
+Stop-Service -Name "Fax" -Force; Set-Service -Name "Fax" -StartupType Disabled
+
+# RETAIL DEMO SERVICE
+Stop-Service -Name "RetailDemo" -Force; Set-Service -Name "RetailDemo" -StartupType Disabled
+
+# WINDOWS MEDIA PLAYER NETWORK SHARING
+Stop-Service -Name "WMPNetworkSvc" -Force; Set-Service -Name "WMPNetworkSvc" -StartupType Disabled
+
+# SMART CARD SERVICES (Disable if not using smart cards)
+Stop-Service -Name "SCardSvr" -Force; Set-Service -Name "SCardSvr" -StartupType Disabled
+Stop-Service -Name "ScDeviceEnum" -Force; Set-Service -Name "ScDeviceEnum" -StartupType Disabled
+
+# PHONE INTEGRATION
+Stop-Service -Name "PhoneSvc" -Force; Set-Service -Name "PhoneSvc" -StartupType Disabled
+
+# DOWNLOADED MAPS MANAGER
+Stop-Service -Name "MapsBroker" -Force; Set-Service -Name "MapsBroker" -StartupType Disabled
+
+# WINDOWS SEARCH (Disable to save resources, but affects search functionality)
+# Stop-Service -Name "WSearch" -Force; Set-Service -Name "WSearch" -StartupType Disabled
+
+# SUPERFETCH/SYSMAIN (Can improve SSD lifespan)
+# Stop-Service -Name "SysMain" -Force; Set-Service -Name "SysMain" -StartupType Disabled
+
+# ----------------------------------------------------------------------
+# WINDOWS DEBLOAT - RE-ENABLE SERVICES (If needed)
+# ----------------------------------------------------------------------
+
+# Example: Re-enable a service
+# Set-Service -Name "ServiceName" -StartupType Automatic; Start-Service -Name "ServiceName"
+
+# List all disabled services
+# Get-Service | Where-Object {$_.StartType -eq 'Disabled'} | Format-Table Name, DisplayName, Status
+
+# ----------------------------------------------------------------------
+# More commands at: curl cmds.space/map
+# ----------------------------------------------------------------------

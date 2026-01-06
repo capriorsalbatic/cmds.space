@@ -1,0 +1,54 @@
+======================================================================
+                    CMDS.SPACE - COMMAND FILES DIRECTORY
+======================================================================
+
+Usage: curl cmds.space/<filename>
+
+----------------------------------------------------------------------
+FILES AVAILABLE
+----------------------------------------------------------------------
+
+[wininit]
+  curl cmds.space/wininit
+  
+  Windows installation commands for setting up a development environment.
+  - Install/update Winget (Windows Package Manager)
+  - Install Python and upgrade Pip
+  - Install Node.js LTS
+  - Install Gemini CLI
+
+----------------------------------------------------------------------
+
+[macinit]
+  curl cmds.space/macinit
+  
+  macOS/Linux installation and setup commands.
+  - Homebrew package manager setup
+  - Install Node.js
+  - Install/upgrade Pip
+  - Install Gemini CLI
+
+----------------------------------------------------------------------
+
+[windebloat]
+  curl cmds.space/windebloat
+  
+  PowerShell commands to disable unnecessary Windows services.
+  - Disable telemetry & data collection
+  - Disable remote services
+  - Disable Xbox services (for non-gamers)
+  - Disable Geolocation, Fax, Retail Demo services
+  - Disable Smart Card and Phone integration
+  - Commands to re-enable services if needed
+
+----------------------------------------------------------------------
+
+[map]
+  curl cmds.space/map
+  
+  This file - directory/index of all available command files.
+
+======================================================================
+NOTE: All commands should be run with Administrator privileges 
+(Windows) or sudo (macOS/Linux) where required.
+======================================================================

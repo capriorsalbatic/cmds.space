@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------
+# WINDOWS INSTALLATION COMMANDS (Use PowerShell or CMD as Administrator)
+# ----------------------------------------------------------------------
+
+# 1. INSTALL/UPDATE WINGET (Windows Package Manager)
+# This must be run first in an elevated (Administrator) PowerShell terminal.
+Add-AppxPackage -Path https://aka.ms/getwinget -WhatIf:$false
+
+# 2. INSTALL PYTHON (Prerequisite for Pip)
+winget install Python.Python3 --silent --scope machine
+
+# 3. UPGRADE PIP (Python Package Installer)
+# Run after Python installation.
+python -m pip install --upgrade pip
+
+# 4. INSTALL NODE.JS (Prerequisite for NPM/Gemini CLI)
+# Installs the Node.js LTS (Long Term Support) version.
+winget install OpenJS.NodeJS.LTS --silent --scope machine
+
+# 5. INSTALL GEMINI CLI (Command Line Interface)
+# Requires Node.js/NPM to be installed first.
+npm install -g @google/gemini-cli
+
+# ----------------------------------------------------------------------
+# More commands at: curl cmds.space/map
+# ----------------------------------------------------------------------
