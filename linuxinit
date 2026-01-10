@@ -1,0 +1,35 @@
+# ----------------------------------------------------------------------
+# LINUX INSTALLATION COMMANDS (Use Bash/Zsh Terminal)
+# ----------------------------------------------------------------------
+
+# 1. UPDATE PACKAGE MANAGER
+# Update apt package lists
+sudo apt update && sudo apt upgrade -y
+
+# 2. INSTALL NODE.JS & NPM
+# Install Node.js and npm using apt
+sudo apt install -y nodejs npm
+
+# Or use NodeSource for latest version:
+# curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+# sudo apt install -y nodejs
+
+# 3. INSTALL CLAUDE CODE
+# Install Claude Code CLI globally with npm
+npm install -g @anthropic-ai/claude-code
+
+# 4. INSTALL PYTHON & PIP
+# Install Python 3 and pip
+sudo apt install -y python3 python3-pip
+
+# 5. UPGRADE PIP
+# Ensure pip is up-to-date
+python3 -m pip install --upgrade pip
+
+# 6. INSTALL COMMON UTILITIES
+# Install useful development tools
+sudo apt install -y git curl wget build-essential
+
+# ----------------------------------------------------------------------
+# More commands at: curl cmds.space/map
+# ----------------------------------------------------------------------
