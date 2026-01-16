@@ -1,4 +1,7 @@
 {
+  // DEPRECATED: This file is no longer used for deployment.
+  // The site now deploys via Cloudflare Pages instead of Cloudflare Workers.
+  // See README.md for Cloudflare Pages configuration instructions.
   "name": "cmdsspace",
   "compatibility_date": "2026-01-05",
   "assets": {
